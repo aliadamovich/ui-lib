@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+  font-size: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    font-size: 14px;
+    background-color: #171717 !important; /* Ensures autofilled background matches manual input */
+    transition: background-color 5000s ease-in-out 0s; /* Prevents quick white flash */
+
+    -webkit-text-fill-color: white !important; /* Ensures text color remains consistent */
+  }
+
+  input:-webkit-autofill:disabled {
+    -webkit-text-fill-color: #4c4c4c !important; /* Text color for disabled input with autofill */
+  }
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family-primary), sans-serif;
+  line-height: var(--line-height-m);
+  color: var(--color-light-100);
+
+  background-color: var(--color-dark-900);
+}
