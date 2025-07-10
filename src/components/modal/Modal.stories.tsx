@@ -7,6 +7,9 @@ import { Typography } from '../typography'
 
 const meta = {
   component: Modal,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   title: 'Components/Modal',
   argTypes: {
@@ -32,7 +35,7 @@ export const Default: Story = {
     title: 'Modal',
     size: 'sm',
   },
-  render: (args) => {
+  render: args => {
     const [internalOpen, setInternalOpen] = useState(args.open)
 
     useEffect(() => {
@@ -62,7 +65,7 @@ export const EmailSent: Story = {
     open: false,
     title: 'Email sent',
   },
-  render: (args) => {
+  render: args => {
     const [internalOpen, setInternalOpen] = useState(args.open)
 
     useEffect(() => {
@@ -98,7 +101,7 @@ export const CustomSized: Story = {
     title: 'Custom Size Modal',
     size: 'md',
   },
-  render: (args) => {
+  render: args => {
     const [internalOpen, setInternalOpen] = useState(args.open)
 
     useEffect(() => {
@@ -122,7 +125,9 @@ export const CustomSized: Story = {
               height: '400px',
             }}
           >
-            <Typography variant="body1">This is a custom sized modal with different dimensions.</Typography>
+            <Typography variant="body1">
+              This is a custom sized modal with different dimensions.
+            </Typography>
             <div
               style={{
                 marginTop: 'auto',
@@ -145,7 +150,7 @@ export const CustomOpacity: Story = {
     title: 'Custom Opacity Modal',
     size: 'md',
   },
-  render: (args) => {
+  render: args => {
     const [internalOpen, setInternalOpen] = useState(args.open)
 
     useEffect(() => {
@@ -191,7 +196,7 @@ export const NoHeader: Story = {
     open: false,
     size: 'sm',
   },
-  render: (args) => {
+  render: args => {
     const [internalOpen, setInternalOpen] = useState(args.open)
 
     useEffect(() => {

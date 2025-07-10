@@ -1,0 +1,100 @@
+.container {
+  position: relative;
+  min-height: 400px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slideContent {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.singleImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.navButton {
+  --button-radius: 0%;
+  --button-bg-color: #0000004d;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: var(--button-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover:not(.disabled) {
+  background-color: #00000080;
+}
+
+.navButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.navButton.disabled:hover {
+  background-color: #0000004d;
+}
+
+.prevButton {
+  left: 16px;
+}
+
+.nextButton {
+  right: 16px;
+}
+
+.bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-light-100);
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bulletActive {
+  background-color: var(--color-accent-500);
+  width: 6px;
+  height: 6px;
+}
+
+.counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #00000080;
+  color: var(--color-light-100);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
