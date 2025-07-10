@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { MdLanguage } from 'react-icons/md'
-import { Button } from './Button_temp'
+import { Button } from './Button'
 
 const meta = {
   title: 'Components/Button',
