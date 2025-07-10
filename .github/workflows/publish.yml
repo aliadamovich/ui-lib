@@ -21,6 +21,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+      - name: Clean build artifacts and caches
+        run: rm -rf dist .turbo .vite .storybook/.vite
       - name: Build lib
         run: pnpm run build
       - name: Build lib
