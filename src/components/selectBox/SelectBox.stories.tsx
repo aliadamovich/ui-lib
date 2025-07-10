@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
+
 import { SelectBox, SelectItem } from './SelectBox'
 
 const meta: Meta<typeof SelectBox> = {
@@ -47,16 +48,16 @@ export const Primary: Story = {
     placeholder: 'Choose language',
     children: (
       <>
-        <SelectItem value="french">
+        <SelectItem value={'french'}>
           <span>🇫🇷</span> French
         </SelectItem>
-        <SelectItem value="german">
+        <SelectItem value={'german'}>
           <span>🇩🇪</span> German
         </SelectItem>
-        <SelectItem value="russian">
+        <SelectItem value={'russian'}>
           <span>🇷🇺</span> Russian
         </SelectItem>
-        <SelectItem value="english">
+        <SelectItem value={'english'}>
           <span>🇺🇸</span> English
         </SelectItem>
       </>
@@ -70,10 +71,10 @@ export const WithDefaultValue: Story = {
     defaultValue: 'german',
     children: (
       <>
-        <SelectItem value="french">
+        <SelectItem value={'french'}>
           <span>🇫🇷</span> French
         </SelectItem>
-        <SelectItem value="german">
+        <SelectItem value={'german'}>
           <span>🇩🇪</span> German
         </SelectItem>
       </>
@@ -86,10 +87,10 @@ export const Disabled: Story = {
     placeholder: 'Choose language',
     children: (
       <>
-        <SelectItem value="french">
+        <SelectItem value={'french'}>
           <span>🇫🇷</span> French
         </SelectItem>
-        <SelectItem value="german">
+        <SelectItem value={'german'}>
           <span>🇩🇪</span> German
         </SelectItem>
       </>
@@ -104,10 +105,10 @@ export const WithAdjustableWidth: Story = {
     placeholder: 'Choose language',
     children: (
       <>
-        <SelectItem value="french">
+        <SelectItem value={'french'}>
           <span>🇫🇷</span> French
         </SelectItem>
-        <SelectItem value="german">
+        <SelectItem value={'german'}>
           <span>🇩🇪</span> German
         </SelectItem>
       </>
@@ -120,11 +121,11 @@ export const Pagination: Story = {
     defaultValue: '100',
     children: (
       <>
-        <SelectItem value="10">10</SelectItem>
-        <SelectItem value="20">20</SelectItem>
-        <SelectItem value="30">30</SelectItem>
-        <SelectItem value="50">50</SelectItem>
-        <SelectItem value="100">100</SelectItem>
+        <SelectItem value={'10'}>10</SelectItem>
+        <SelectItem value={'20'}>20</SelectItem>
+        <SelectItem value={'30'}>30</SelectItem>
+        <SelectItem value={'50'}>50</SelectItem>
+        <SelectItem value={'100'}>100</SelectItem>
       </>
     ),
   },

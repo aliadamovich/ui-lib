@@ -1,27 +1,27 @@
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
   align-items: center;
+  gap: 5px;
 
   .buttons {
     display: flex;
-    column-gap: 5px;
     align-items: center;
+    column-gap: 5px;
 
     .button {
-      cursor: pointer;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-width: 24px;
       height: 24px;
+      border: none;
+      border-radius: 2px;
+      background: none;
       font-size: var(--font-size-s);
       font-weight: var(--font-weight-regular);
       line-height: var(--line-height-m);
-      background: none;
-      border: none;
-      border-radius: 2px;
+      cursor: pointer;
 
       &:hover {
         background-color: var(--color-dark-500);
@@ -40,9 +40,9 @@
       }
 
       &.active {
-        touch-action: none;
-        color: var(--color-dark-900);
         background-color: var(--color-light-100);
+        color: var(--color-dark-900);
+        touch-action: none;
       }
 
       &.arrowDisabled {
@@ -58,9 +58,9 @@
     padding-left: 24px;
 
     .select {
+      column-gap: unset;
       height: 22px;
       padding: 0 6px;
-      column-gap: unset;
 
       span {
         &:nth-child(2) {

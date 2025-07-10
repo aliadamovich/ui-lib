@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
+
 import { Meta, StoryObj } from '@storybook/react'
 
-import { Modal } from './Modal'
-import { Typography } from '../typography'
 import { Button } from '../button'
+import { Typography } from '../typography'
+import { Modal } from './Modal'
 
 const meta = {
   component: Modal,
@@ -52,7 +53,7 @@ export const Default: Story = {
         <Button onClick={() => handleOpenChange(true)}>Open Modal</Button>
         <Modal {...args} open={internalOpen} onOpenChange={handleOpenChange}>
           <div style={{ padding: '30px 0 12px' }}>
-            <Typography variant="body1">Modal content here</Typography>
+            <Typography variant={'body1'}>Modal content here</Typography>
           </div>
         </Modal>
       </>
@@ -80,9 +81,9 @@ export const EmailSent: Story = {
     return (
       <>
         <Button onClick={() => handleOpenChange(true)}>Show Email Sent Modal</Button>
-        <Modal {...args} open={internalOpen} onOpenChange={handleOpenChange} title="Email sent">
+        <Modal {...args} open={internalOpen} onOpenChange={handleOpenChange} title={'Email sent'}>
           <div style={{ padding: '30px 0 12px' }}>
-            <Typography variant="body1" style={{ marginBottom: '18px' }}>
+            <Typography variant={'body1'} style={{ marginBottom: '18px' }}>
               We have sent a link to confirm your email to epam@epam.com
             </Typography>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -125,7 +126,7 @@ export const CustomSized: Story = {
               height: '400px',
             }}
           >
-            <Typography variant="body1">
+            <Typography variant={'body1'}>
               This is a custom sized modal with different dimensions.
             </Typography>
             <div
@@ -174,7 +175,7 @@ export const CustomOpacity: Story = {
               height: '400px',
             }}
           >
-            <Typography variant="body1">This modal has an overlay with 100% opacity.</Typography>
+            <Typography variant={'body1'}>This modal has an overlay with 100% opacity.</Typography>
             <div
               style={{
                 marginTop: 'auto',
@@ -213,7 +214,7 @@ export const NoHeader: Story = {
         <Button onClick={() => handleOpenChange(true)}>Open Modal Without Header</Button>
         <Modal {...args} open={internalOpen} onOpenChange={handleOpenChange}>
           <div style={{ paddingTop: '40px', paddingBottom: '24px' }}>
-            <Typography variant="body1" style={{ marginBottom: '16px' }}>
+            <Typography variant={'body1'} style={{ marginBottom: '16px' }}>
               This modal has no title or header, just content and a close button in the corner.
             </Typography>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>

@@ -1,9 +1,9 @@
 import { ComponentPropsWithoutRef, ComponentRef, ReactNode, forwardRef } from 'react'
 
 import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu'
+import clsx from 'clsx'
 
 import s from './DropdownMenu.module.scss'
-import clsx from 'clsx'
 
 type DropdownMenuProps = {
   align?: 'center' | 'end' | 'start'

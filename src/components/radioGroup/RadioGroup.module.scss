@@ -37,43 +37,43 @@
     cursor: pointer;
 
     [data-disabled] & {
-      cursor: default;
       opacity: 0.5;
+      cursor: default;
     }
   }
 }
 
 .icon {
+  box-sizing: border-box;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  align-items: center;
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  transition: 200ms all;
   background-color: transparent;
+  transition: 200ms all;
 
   &::before {
-    content: '';
+    box-sizing: border-box;
     display: block;
     width: 16px;
     height: 16px;
     border: 2px solid var(--color-light-100, --color-light-100);
     border-radius: 50%;
     transition: 200ms border-color;
-    box-sizing: border-box;
+    content: '';
   }
 
   &::after {
-    content: '';
     position: absolute;
-    border-radius: 50%;
-    transition: 200ms background-color;
     width: 0;
     height: 0;
+    border-radius: 50%;
     background-color: var(--color-light-100);
+    transition: 200ms background-color;
+    content: '';
   }
 
   [data-state='unchecked'] & {
@@ -96,8 +96,8 @@
 
   .root[data-disabled] & {
     &::before {
-      border-color: var(--color-dark-300);
       border-width: 2px;
+      border-color: var(--color-dark-300);
     }
 
     &::after {
@@ -123,14 +123,14 @@
 }
 
 .error {
+  margin-top: 4px;
   font-size: 12px;
   color: var(--color-danger-500, --color-danger-500);
-  margin-top: 4px;
 }
 
 .labelText {
   span.highlighted {
-    color: var(--color-light-100);
     font-weight: var(--font-weight-bold);
+    color: var(--color-light-100);
   }
 }

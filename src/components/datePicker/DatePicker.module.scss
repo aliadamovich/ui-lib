@@ -3,8 +3,8 @@
 
   :global(.react-datepicker__day-name) {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 36px;
     height: 36px;
     margin: 0;
@@ -37,24 +37,24 @@
   :global(.react-datepicker__day) {
     position: relative;
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 36px;
     height: 36px;
     margin: 0;
-    color: var(--color-light-100);
     border-radius: 50%;
-    outline: none;
+    color: var(--color-light-100);
     transition: all 0.3s ease 0s;
+    outline: none;
 
     &:hover {
-      background-color: var(--color-accent-900);
       border-radius: 50%;
+      background-color: var(--color-accent-900);
     }
 
     &:focus-visible {
-      background-color: transparent;
       border: 2px solid var(--color-accent-500);
+      background-color: transparent;
     }
   }
 
@@ -71,10 +71,10 @@
   }
 
   :global(.react-datepicker__day--selected) {
-    color: var(--color-light-100);
+    border-radius: 50%;
     background-color: var(--color-accent-900);
     background-image: radial-gradient(28px circle, var(--color-accent-900) 48%, transparent 51%);
-    border-radius: 50%;
+    color: var(--color-light-100);
   }
 
   :global(.react-datepicker__day--keyboard-selected) {
@@ -106,29 +106,30 @@
     color: var(--color-light-100) !important;
   }
 
-  &:disabled {
-    &::placeholder {
-      color: var(--color-light-900) !important;
-    }
-  }
-
   &:hover:not(:disabled) {
     border-color: var(--color-light-900);
     background-color: var(--color-dark-500);
   }
 
   &.error {
-    color: var(--color-danger-500);
     border-color: var(--color-danger-500);
+    color: var(--color-danger-500);
 
     &::placeholder {
       color: var(--color-danger-500) !important;
+    }
+  }
+
+  &:disabled {
+    &::placeholder {
+      color: var(--color-light-900) !important;
     }
   }
 }
 
 .inputContainer {
   position: relative;
+  min-width: 250px;
 
   &.error {
     svg {
@@ -138,11 +139,11 @@
 }
 
 .icon {
-  cursor: pointer;
   position: absolute;
   top: 8px;
   right: 12px;
   color: var(--color-light-100);
+  cursor: pointer;
 
   &.disabled {
     color: var(--color-light-900);
@@ -152,11 +153,11 @@
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding-left: 5px;
-  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
   color: var(--color-light-100);
 }
 
@@ -166,15 +167,15 @@
 
 .button {
   all: unset;
-  cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  transition: all 0.3s ease 0s;
   background: var(--color-dark-100);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--color-accent-500);
@@ -183,8 +184,8 @@
 
 .yearSelect {
   padding: 0;
-  background-color: var(--color-dark-500);
   border: var(--color-dark-300);
+  background-color: var(--color-dark-500);
 }
 
 .popper {
@@ -193,8 +194,8 @@
 
 .day {
   &:global(.react-datepicker__day--in-selecting-range) {
-    background-color: var(--color-accent-900);
     border-radius: 0;
+    background-color: var(--color-accent-900);
   }
 
   &:global(.react-datepicker__day--selecting-range-start) {
@@ -206,8 +207,8 @@
   }
 
   &:global(.react-datepicker__day--in-range) {
-    background-color: var(--color-accent-900);
     border-radius: 0;
+    background-color: var(--color-accent-900);
   }
 
   &:global(.react-datepicker__day--range-start) {
@@ -215,9 +216,9 @@
   }
 
   &:global(.react-datepicker__day--range-end) {
-    color: var(--color-light-100);
+    border-radius: 0 50% 50% 0;
     background-color: var(--color-accent-900);
     background-image: radial-gradient(28px circle, var(--color-accent-900) 48%, transparent 51%);
-    border-radius: 0 50% 50% 0;
+    color: var(--color-light-100);
   }
 }

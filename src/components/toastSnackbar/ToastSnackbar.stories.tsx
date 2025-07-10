@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ToastSnackbar } from './ToastSnackbar'
-import { Button } from '../button'
+
 import { toast } from 'react-toastify'
+
+import { Button } from '../button'
+import { ToastSnackbar } from './ToastSnackbar'
 
 const meta: Meta<typeof ToastSnackbar> = {
   title: 'Components/ToastSnackbar',

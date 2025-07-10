@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { MdLanguage } from 'react-icons/md'
+
 import { Button } from './Button'
 
 const meta = {
@@ -117,9 +119,9 @@ export const Sizes: Story = {
   },
   render: () => (
     <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-      <Button size="small">Small</Button>
-      <Button size="medium">Medium</Button>
-      <Button size="large">Large</Button>
+      <Button size={'small'}>Small</Button>
+      <Button size={'medium'}>Medium</Button>
+      <Button size={'large'}>Large</Button>
     </div>
   ),
 }

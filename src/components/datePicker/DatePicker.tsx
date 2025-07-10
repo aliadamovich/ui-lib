@@ -3,14 +3,17 @@
 import { ComponentProps, forwardRef, ReactNode, useEffect, useState } from 'react'
 import { ReactDatePickerCustomHeaderProps, registerLocale } from 'react-datepicker'
 import * as RDP from 'react-datepicker'
-import { format } from 'date-fns'
-import { enUS } from 'date-fns/locale'
-import { getYear } from 'date-fns'
+
 import clsx from 'clsx'
+import { format } from 'date-fns'
+import { getYear } from 'date-fns'
+import { enUS } from 'date-fns/locale'
 import { LuCalendarDays } from 'react-icons/lu'
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md'
+
 import textFieldStyles from '../textField/TextField.module.scss'
 import s from './DatePicker.module.scss'
+
 import { Label } from '../label'
 
 type DatePickerProps = {
@@ -55,6 +58,7 @@ export const DatePicker = ({
   const handleDateChange = (dates: [Date | null, Date | null] | Date | null) => {
     if (Array.isArray(dates)) {
       const [start, end] = dates
+
       setStartDate(start)
       setEndDate(end)
       onSetStartDate(start)
@@ -95,7 +99,7 @@ export const DatePicker = ({
           locale={'enUs'}
           formatWeekDay={formatWeekDay}
           popperClassName={classNames.popper}
-          popperPlacement="bottom-start"
+          popperPlacement={'bottom-start'}
           selectsRange
           showYearDropdown
         />
@@ -117,7 +121,7 @@ export const DatePicker = ({
           locale={'enUs'}
           formatWeekDay={formatWeekDay}
           popperClassName={classNames.popper}
-          popperPlacement="bottom-start"
+          popperPlacement={'bottom-start'}
           showYearDropdown
         />
       )}
@@ -189,8 +193,8 @@ const customHeader = ({
         <button
           className={classNames.button}
           onClick={decreaseMonth}
-          type="button"
-          aria-label="Previous month"
+          type={'button'}
+          aria-label={'Previous month'}
         >
           <MdOutlineKeyboardArrowLeft />
         </button>
@@ -198,8 +202,8 @@ const customHeader = ({
         <button
           className={classNames.button}
           onClick={increaseMonth}
-          type="button"
-          aria-label="Next month"
+          type={'button'}
+          aria-label={'Next month'}
         >
           <MdOutlineKeyboardArrowRight />
         </button>

@@ -1,12 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { useEffect, useState } from 'react'
+
 import { Checkbox } from './Checkbox'
 
 const meta = {
   component: Checkbox,
-  parameters: {
-    layout: 'centered',
-  },
+  // parameters: {
+  //   layout: 'centered',
+  // },
   tags: ['autodocs'],
   title: 'Components/Checkbox',
   argTypes: {

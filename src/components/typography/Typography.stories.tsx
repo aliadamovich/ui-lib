@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Typography } from './Typography'
 
 const meta: Meta<typeof Typography> = {
@@ -149,22 +150,22 @@ export const FontWeightVariations: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div>
-        <Typography variant="body1" fontWeight="regular">
+        <Typography variant={'body1'} fontWeight={'regular'}>
           Body1 - Regular (400)
         </Typography>
-        <Typography variant="body1" fontWeight="medium">
+        <Typography variant={'body1'} fontWeight={'medium'}>
           Body1 - Medium (500)
         </Typography>
-        <Typography variant="body1" fontWeight="bold">
+        <Typography variant={'body1'} fontWeight={'bold'}>
           Body1 - Bold (700)
         </Typography>
       </div>
 
       <div>
-        <Typography variant="body2" fontWeight="regular">
+        <Typography variant={'body2'} fontWeight={'regular'}>
           Body2 - Regular (400)
         </Typography>
-        <Typography variant="body2" fontWeight="bold">
+        <Typography variant={'body2'} fontWeight={'bold'}>
           Body2 - Bold (700)
         </Typography>
       </div>

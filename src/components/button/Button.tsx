@@ -1,5 +1,7 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
+
 import { clsx } from 'clsx'
+
 import s from './Button.module.scss'
 
 const buttonVariant = ['primary', 'secondary', 'outline', 'text', 'link', 'icon', 'clean'] as const

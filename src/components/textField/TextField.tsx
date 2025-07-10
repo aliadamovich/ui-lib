@@ -1,10 +1,13 @@
 'use client'
 
 import { ComponentProps, KeyboardEvent, ReactNode, useId, useState } from 'react'
-import s from './TextField.module.scss'
+
+import clsx from 'clsx'
 import { FiSearch } from 'react-icons/fi'
 import { FiEye, FiEyeOff } from 'react-icons/fi'
-import clsx from 'clsx'
+
+import s from './TextField.module.scss'
+
 import { Label } from '../label'
 
 export type TextFieldProps = ComponentProps<'input'> & {
@@ -34,6 +37,7 @@ export const TextField = ({
   const [showPassword, setShowPassword] = useState(false)
 
   const inputId = useId()
+
   if (search) {
     startIcon = <FiSearch />
   }
@@ -90,7 +94,7 @@ export const TextField = ({
 
         {isPassword && (
           <button
-            type="button"
+            type={'button'}
             tabIndex={-1}
             onClick={togglePasswordHandler}
             className={classNames.endIconButton}

@@ -4,24 +4,24 @@
   align-items: center;
 
   &::before {
-    content: '';
     position: absolute;
     top: 50%;
     left: -10px;
     z-index: -1;
-    transform: translateY(-50%) scale(0);
     display: block;
     width: 36px;
     height: 36px;
-    background-color: var(--color-dark-300);
     border-radius: 100%;
+    background-color: var(--color-dark-300);
+    transform: translateY(-50%) scale(0);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    content: '';
   }
 
   &:focus-within {
     &::before {
-      transform: translateY(-50%) scale(1);
       background-color: var(--color-dark-500);
+      transform: translateY(-50%) scale(1);
     }
   }
 
@@ -39,32 +39,32 @@
   }
 
   .root {
+    all: unset;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 14px;
     height: 14px;
-    all: unset;
     border: 1px solid var(--color-light-100);
     border-radius: 2px;
     cursor: pointer;
 
     .indicator {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      background-color: var(--color-light-100);
       font-size: 16px;
       color: var(--color-dark-900);
-      background-color: var(--color-light-100);
     }
   }
 
   .label {
+    padding-left: 12px;
     font-size: 14px;
+    line-height: 1;
     color: var(--color-light-100);
     cursor: pointer;
-    padding-left: 12px;
-    line-height: 1;
   }
 
   &[aria-disabled='true'] {
@@ -101,7 +101,7 @@
 
   .error {
     position: absolute;
-    top: 15px;
+    top: 12px;
     font-size: var(--font-size-s);
     color: var(--color-danger-500);
   }

@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Scroll } from './Scroll'
 
 import './stories.css'
+
+import { Scroll } from './Scroll'
 
 //import '../scroll.css'; // Ensure your styles are loaded in Storybook
 
@@ -20,9 +21,9 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     children: (
-      <div className="content">
+      <div className={'content'}>
         {[...Array(20).keys()].map(i => (
-          <div key={i} className="item">
+          <div key={i} className={'item'}>
             Item {i + 1}
           </div>
         ))}
@@ -35,9 +36,9 @@ export const Default: Story = {
 export const Horizontal: Story = {
   args: {
     children: (
-      <div className="horizontalContent">
+      <div className={'horizontalContent'}>
         {[...Array(20).keys()].map(i => (
-          <div key={i} className="item">
+          <div key={i} className={'item'}>
             Item {i + 1}
           </div>
         ))}

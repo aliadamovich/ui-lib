@@ -1,5 +1,6 @@
 import * as RadixTabs from '@radix-ui/react-tabs'
 import clsx from 'clsx'
+
 import s from './tabs.module.scss'
 
 export type Tab = {
@@ -18,9 +19,14 @@ type Props = {
 
 export function Tabs({ className, defaultValue, tabs, onValueChange, value }: Props) {
   return (
-    <RadixTabs.Root className={s.root} defaultValue={defaultValue} value={value} onValueChange={onValueChange}>
+    <RadixTabs.Root
+      className={s.root}
+      defaultValue={defaultValue}
+      value={value}
+      onValueChange={onValueChange}
+    >
       <RadixTabs.List className={s.tabList}>
-        {tabs.map((tab) => (
+        {tabs.map(tab => (
           <RadixTabs.Trigger
             className={clsx(s.tab, className)}
             disabled={tab.disabled}

@@ -1,7 +1,7 @@
 .container {
   position: relative;
-  min-height: 400px;
   height: 100%;
+  min-height: 400px;
   overflow: hidden;
 }
 
@@ -13,16 +13,16 @@
 .slideContent {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
 .image {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .singleImage {
@@ -37,17 +37,17 @@
 
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   z-index: 10;
-  background-color: var(--button-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   border: none;
   border-radius: var(--button-radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 10px;
+  background-color: var(--button-bg-color);
+  transform: translateY(-50%);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .navButton:hover:not(.disabled) {
@@ -75,17 +75,17 @@
   display: inline-block;
   width: 6px;
   height: 6px;
+  margin: 0 4px;
   border-radius: 50%;
   background-color: var(--color-light-100);
-  margin: 0 4px;
-  cursor: pointer;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .bulletActive {
-  background-color: var(--color-accent-500);
   width: 6px;
   height: 6px;
+  background-color: var(--color-accent-500);
 }
 
 .counter {
@@ -93,8 +93,8 @@
   right: 10px;
   bottom: 10px;
   padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #00000080;
   font-size: 12px;
   color: var(--color-light-100);
-  background-color: #00000080;
-  border-radius: 4px;
 }

@@ -1,22 +1,22 @@
 .avatarRoot {
-  overflow: hidden;
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  vertical-align: middle;
+  align-items: center;
   border-radius: 100%;
+  overflow: hidden;
+  vertical-align: middle;
 
   .avatarImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: inherit;
+    object-fit: cover;
   }
 
   .avatarFallback {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     font-weight: var(--font-weight-medium);

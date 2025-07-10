@@ -1,9 +1,10 @@
 import { ReactNode } from 'react'
 
 import s from './confirmModal.module.scss'
+
+import { Button } from '../button'
 import { Modal } from '../modal'
 import { Typography } from '../typography'
-import { Button } from '../button'
 
 type Props = {
   title: string

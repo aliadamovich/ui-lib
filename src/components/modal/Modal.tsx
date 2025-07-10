@@ -8,16 +8,18 @@ import {
   ReactElement,
   ReactNode,
 } from 'react'
+
 import * as Dialog from '@radix-ui/react-dialog'
-import { IoClose } from 'react-icons/io5'
-import { motion, AnimatePresence } from 'framer-motion'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 import clsx from 'clsx'
+import { motion, AnimatePresence } from 'framer-motion'
+import { IoClose } from 'react-icons/io5'
 
-import { getOverlayAnimation, windowAnimation } from './ModalAnimations'
 import s from './Modal.module.scss'
-import { Typography } from '../typography'
+
 import { Card } from '../card'
+import { Typography } from '../typography'
+import { getOverlayAnimation, windowAnimation } from './ModalAnimations'
 
 type ModalSize = 'sm' | 'md' | 'lg' | 'auto'
 type CardPadding = 'default' | 'top-only' | 'none'
@@ -61,7 +63,9 @@ export const Modal = forwardRef<ComponentRef<'div'>, ModalProps>((props, ref) =>
   } = props
 
   const handleOpenChange = (newOpen: boolean) => {
-    if (!newOpen && preventClose) return
+    if (!newOpen && preventClose) {
+      return
+    }
     onOpenChange?.(newOpen)
   }
 
@@ -80,7 +84,7 @@ export const Modal = forwardRef<ComponentRef<'div'>, ModalProps>((props, ref) =>
   return (
     <Dialog.Root {...rest} open={open} onOpenChange={handleOpenChange} modal>
       <Dialog.Portal forceMount>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode={'wait'}>
           {open && (
             <>
               <Dialog.Overlay asChild>
@@ -98,7 +102,7 @@ export const Modal = forwardRef<ComponentRef<'div'>, ModalProps>((props, ref) =>
 
                             <Dialog.Title asChild>
                               {hasTitle ? (
-                                <Typography variant="h1" className={titleClass}>
+                                <Typography variant={'h1'} className={titleClass}>
                                   {title}
                                 </Typography>
                               ) : (
@@ -108,7 +112,7 @@ export const Modal = forwardRef<ComponentRef<'div'>, ModalProps>((props, ref) =>
 
                             <div className={s.rightButton}>
                               {rightButton || (
-                                <Dialog.Close className={s.closeButton} aria-label="Close">
+                                <Dialog.Close className={s.closeButton} aria-label={'Close'}>
                                   <IoClose size={24} />
                                 </Dialog.Close>
                               )}
@@ -120,7 +124,7 @@ export const Modal = forwardRef<ComponentRef<'div'>, ModalProps>((props, ref) =>
                               <VisuallyHidden>Modal</VisuallyHidden>
                             </Dialog.Title>
                             <div className={s.noHeaderCloseButton}>
-                              <Dialog.Close className={s.closeButton} aria-label="Close">
+                              <Dialog.Close className={s.closeButton} aria-label={'Close'}>
                                 <IoClose size={24} />
                               </Dialog.Close>
                             </div>
@@ -129,7 +133,7 @@ export const Modal = forwardRef<ComponentRef<'div'>, ModalProps>((props, ref) =>
 
                         <Dialog.Description asChild>
                           {description ? (
-                            <Typography variant="body1" className={s.description}>
+                            <Typography variant={'body1'} className={s.description}>
                               {description}
                             </Typography>
                           ) : (

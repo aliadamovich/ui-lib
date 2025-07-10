@@ -1,16 +1,16 @@
 .content {
   z-index: 5000;
   padding: 6px;
-  background-color: var(--color-dark-500);
-  border-radius: 2px;
   border: 1px solid var(--color-dark-100);
+  border-radius: 2px;
+  background-color: var(--color-dark-500);
   overflow: auto;
 }
 
 .trigger {
-  cursor: pointer;
-  background: transparent;
   border: none;
+  background: transparent;
+  cursor: pointer;
 
   &:hover {
     color: var(--color-accent-500);
@@ -23,16 +23,16 @@
 }
 
 .dropdownMenuItem {
-  cursor: pointer;
   display: flex;
-  gap: 6px;
   align-items: center;
+  gap: 6px;
   height: 100%;
   padding: 5px;
   font-size: var(--font-size-xs);
   line-height: var(--line-height-s);
   color: var(--color-light-100);
   transition-duration: 150ms;
+  cursor: pointer;
 
   &:hover {
     color: var(--color-accent-300);
@@ -43,9 +43,9 @@
   }
 
   .dropdownMenuItem {
-    cursor: pointer;
     font-size: var(--font-size-xs);
     transition-duration: 150ms;
+    cursor: pointer;
 
     &:hover {
       color: var(--color-accent-500);
@@ -56,9 +56,9 @@
     }
 
     &[data-disabled] {
-      pointer-events: none;
-      opacity: 0.5;
       color: var(--color-dark-100);
+      opacity: 0.5;
+      pointer-events: none;
     }
   }
 }
@@ -66,6 +66,6 @@
 .arrow {
   width: 14px;
   height: 8px;
-  stroke: var(--color-dark-100);
   fill: var(--color-dark-500);
+  stroke: var(--color-dark-100);
 }

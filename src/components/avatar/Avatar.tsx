@@ -1,7 +1,10 @@
 import { ComponentProps } from 'react'
+
 import * as AvatarRadix from '@radix-ui/react-avatar'
 import clsx from 'clsx'
+
 import s from './Avatar.module.scss'
+
 import { useGenerateColor } from './hooks/useGenerateColor'
 
 type Props = {

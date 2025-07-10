@@ -1,7 +1,9 @@
-import { Meta } from '@storybook/react'
-import { ConfirmModal } from './ConfirmModal'
 import { useState } from 'react'
+
+import { Meta } from '@storybook/react'
+
 import { Button } from '../button'
+import { ConfirmModal } from './ConfirmModal'
 
 const meta = {
   component: ConfirmModal,

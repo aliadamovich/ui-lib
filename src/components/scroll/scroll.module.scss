@@ -11,9 +11,9 @@
 
 .scrollbar {
   display: flex;
+  border-radius: 3px;
   background-color: inherit;
   transition: background-color 0.2s;
-  border-radius: 3px;
 
   &[data-orientation='vertical'] {
     flex-direction: column;
@@ -28,8 +28,8 @@
 .thumb {
   width: 45px;
   height: 45px;
-  background-color: var(--color-dark-300);
   border-radius: 3px;
+  background-color: var(--color-dark-300);
 
   &:hover {
     background-color: var(--color-light-900);

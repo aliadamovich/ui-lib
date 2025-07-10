@@ -2,8 +2,9 @@ import clsx from 'clsx'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
 import s from './pagination.module.scss'
-import { usePagination } from './hooks/usePagination'
+
 import { SelectBox, SelectItem } from '../selectBox'
+import { usePagination } from './hooks/usePagination'
 
 type Props = {
   className?: string
@@ -81,7 +82,7 @@ export const Pagination = ({
           disabled={currentPage === 1}
           onClick={() => onPageChange(currentPage - 1)}
           type={'button'}
-          aria-label="Previous page"
+          aria-label={'Previous page'}
         >
           <FiChevronLeft />
         </button>
@@ -106,7 +107,7 @@ export const Pagination = ({
           disabled={currentPage === totalPages || totalPages === 0}
           onClick={() => onPageChange(currentPage + 1)}
           type={'button'}
-          aria-label="Next page"
+          aria-label={'Next page'}
         >
           <FiChevronRight />
         </button>

@@ -1,5 +1,7 @@
 import { ComponentProps, useId } from 'react'
+
 import clsx from 'clsx'
+
 import s from './textArea.module.scss'
 
 export type TextAreaProps = {

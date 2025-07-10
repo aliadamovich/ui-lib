@@ -1,6 +1,7 @@
+import { ComponentProps, ReactNode, useId } from 'react'
+
 import * as CheckboxRadix from '@radix-ui/react-checkbox'
 import { clsx } from 'clsx'
-import { ComponentProps, ReactNode, useId } from 'react'
 import { IoCheckmarkSharp } from 'react-icons/io5'
 
 import s from './CheckBox.module.scss'

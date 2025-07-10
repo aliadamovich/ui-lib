@@ -1,4 +1,4 @@
-@import 'colors.css';
-@import 'boilerplate.css';
-@import 'typography.css';
-@import 'common.css';
+@import url('colors.css');
+@import url('boilerplate.css');
+@import url('typography.css');
+@import url('common.css');

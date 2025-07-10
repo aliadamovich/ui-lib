@@ -1,8 +1,10 @@
 import * as React from 'react'
+
 import * as Select from '@radix-ui/react-select'
-import s from './SelectBox.module.scss'
-import { FiChevronDown } from 'react-icons/fi'
 import clsx from 'clsx'
+import { FiChevronDown } from 'react-icons/fi'
+
+import s from './SelectBox.module.scss'
 
 type SelectBoxProps = React.ComponentPropsWithoutRef<typeof Select.Root> & {
   placeholder?: string
@@ -34,7 +36,7 @@ const SelectBox = ({
     </Select.Trigger>
 
     <Select.Portal>
-      <Select.Content className={s.content} position="popper" avoidCollisions>
+      <Select.Content className={s.content} position={'popper'} avoidCollisions>
         <Select.Viewport>{children}</Select.Viewport>
       </Select.Content>
     </Select.Portal>
@@ -51,6 +53,7 @@ const SelectItem = React.forwardRef<
     </Select.Item>
   )
 })
+
 SelectItem.displayName = 'SelectItem'
 
 export { SelectBox, SelectItem }

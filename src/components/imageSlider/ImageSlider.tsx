@@ -1,10 +1,12 @@
 'use client'
 
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
 import type { Swiper as SwiperType } from 'swiper'
+
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from 'react'
+
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
+import { Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -96,6 +98,7 @@ export const ImageSlider = ({
 
   const handleSlideChange = (swiper: SwiperType) => {
     const newIndex = swiper.activeIndex
+
     setActiveIndex(newIndex)
     setIsBeginning(swiper.isBeginning)
     setIsEnd(swiper.isEnd)
@@ -130,9 +133,9 @@ export const ImageSlider = ({
             : false
         }
         className={s.swiper}
-        observer={true}
-        observeParents={true}
-        resizeObserver={true}
+        observer
+        observeParents
+        resizeObserver
       >
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}-${image.src}`}>
@@ -150,11 +153,11 @@ export const ImageSlider = ({
       {showControls && (
         <>
           <button
-            type="button"
+            type={'button'}
             className={`${s.navButton} ${s.prevButton} ${
               isBeginning ? s.disabled : ''
             } ${buttonClassName}`}
-            aria-label="Previous image"
+            aria-label={'Previous image'}
             style={buttonStyle}
             onClick={e => {
               e.stopPropagation()
@@ -166,11 +169,11 @@ export const ImageSlider = ({
             <IoChevronBackOutline size={buttonSize} />
           </button>
           <button
-            type="button"
+            type={'button'}
             className={`${s.navButton} ${s.nextButton} ${
               isEnd ? s.disabled : ''
             } ${buttonClassName}`}
-            aria-label="Next image"
+            aria-label={'Next image'}
             style={buttonStyle}
             onClick={e => {
               e.stopPropagation()

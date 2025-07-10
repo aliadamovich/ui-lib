@@ -1,4 +1,5 @@
 import { forwardRef, ComponentPropsWithoutRef, ComponentRef } from 'react'
+
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import { clsx } from 'clsx'
 
@@ -36,25 +37,27 @@ type Props = {
   options: Option[]
 } & Omit<ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>, 'children'>
 
-const RadioGroup = forwardRef<ComponentRef<typeof RadioGroupPrimitive.Root>, Props>((props, ref) => {
-  const { errorMessage, options, ...restProps } = props
+const RadioGroup = forwardRef<ComponentRef<typeof RadioGroupPrimitive.Root>, Props>(
+  (props, ref) => {
+    const { errorMessage, options, ...restProps } = props
 
-  return (
-    <div className={s.container}>
-      <RadioGroupRoot {...restProps} ref={ref}>
-        {options.map((option) => (
-          <label className={s.label} key={option.value}>
-            <RadioGroupItem value={option.value} id={option.value} />
-            <label htmlFor={option.value} className={s.labelText}>
-              {option.label}
+    return (
+      <div className={s.container}>
+        <RadioGroupRoot {...restProps} ref={ref}>
+          {options.map(option => (
+            <label className={s.label} key={option.value}>
+              <RadioGroupItem value={option.value} id={option.value} />
+              <label htmlFor={option.value} className={s.labelText}>
+                {option.label}
+              </label>
             </label>
-          </label>
-        ))}
-      </RadioGroupRoot>
-      {errorMessage && <div className={s.error}>{errorMessage}</div>}
-    </div>
-  )
-})
+          ))}
+        </RadioGroupRoot>
+        {errorMessage && <div className={s.error}>{errorMessage}</div>}
+      </div>
+    )
+  }
+)
 
 RadioGroup.displayName = 'RadioGroup'
 

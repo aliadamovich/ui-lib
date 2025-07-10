@@ -1,25 +1,25 @@
 .fullscreen {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
+  height: 100%;
   overflow: hidden;
 }
 
 .inline {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 8px;
   margin: 30px 0;
 }
 
 .message {
   font-size: 14px;
-  color: var(--color-light-100);
   text-align: center;
+  color: var(--color-light-100);
 }
 
 @keyframes spin {
@@ -30,8 +30,8 @@
 
 .loaderWrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
 
@@ -42,11 +42,11 @@
 }
 
 .loaderCircle {
+  animation: dash 1.5s ease-in-out infinite;
   stroke: url('#gradient');
   stroke-dasharray: 90, 150;
   stroke-dashoffset: 0;
   stroke-linecap: round;
-  animation: dash 1.5s ease-in-out infinite;
 }
 
 /* SVG gradient definition */
@@ -72,8 +72,8 @@
 
 /* Gradient */
 .loaderSvg defs {
-  pointer-events: none;
   position: absolute;
+  pointer-events: none;
 }
 
 @keyframes rotate {

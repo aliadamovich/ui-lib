@@ -6,8 +6,8 @@ export const ToastSnackbar = () => {
   return (
     <>
       <ToastContainer
-        theme="dark"
-        position="bottom-right"
+        theme={'dark'}
+        position={'bottom-right'}
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop

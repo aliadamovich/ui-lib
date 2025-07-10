@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { DropdownMenu } from './DropdownMenu'
-
 import { HiDotsHorizontal } from 'react-icons/hi'
+
+import { DropdownMenu } from './DropdownMenu'
 import { DropdownMenuItem } from './DropdownMenuItem'
 
 const meta: Meta<typeof DropdownMenu> = {
@@ -53,7 +53,7 @@ export const Default: Story = {
 
 export const WithIconButton: Story = {
   args: {
-    trigger: <HiDotsHorizontal aria-label="Open menu" />,
+    trigger: <HiDotsHorizontal aria-label={'Open menu'} />,
     children: <MenuItems />,
   },
 }
