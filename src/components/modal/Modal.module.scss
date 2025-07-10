@@ -1,20 +1,20 @@
 .modal {
   position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  inset: 0;
+  box-sizing: border-box;
 }
 
 .overlay {
-  background: var(--color-dark-900);
   position: fixed;
+  z-index: 1000;
+  background: var(--color-dark-900);
   opacity: 0.6;
   inset: 0;
-  z-index: 1000;
 }
 
 .content {
@@ -52,14 +52,14 @@
   position: relative;
 
   &.withHeader::before {
-    content: '';
     position: absolute;
     top: 62px;
     left: 0;
-    height: 1px;
-    width: 100%;
-    background-color: var(--color-dark-100);
     z-index: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: var(--color-dark-100);
   }
 }
 
@@ -74,10 +74,10 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-bottom: 12px;
+  justify-content: space-between;
   width: 100%;
+  padding-bottom: 12px;
 }
 
 .customHeader {
@@ -133,9 +133,9 @@
 }
 
 .title {
-  color: var(--color-light-100);
-  margin: 0;
   flex: 1;
+  margin: 0;
+  color: var(--color-light-100);
   text-align: left;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .padding-top-only {
-  padding-top: 12px 0 0 0;
+  padding-top: 12px;
 }
 
 .padding-none {

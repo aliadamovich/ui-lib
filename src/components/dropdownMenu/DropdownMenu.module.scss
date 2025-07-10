@@ -1,20 +1,20 @@
 .content {
-  background-color: var(--color-dark-500);
+  z-index: 5000;
   padding: 6px;
+  background-color: var(--color-dark-500);
   border-radius: 2px;
   border: 1px solid var(--color-dark-100);
-  z-index: 5000;
   overflow: auto;
 }
 
 .trigger {
   cursor: pointer;
+  background: transparent;
+  border: none;
 
   &:hover {
     color: var(--color-accent-500);
   }
-  background: transparent;
-  border: none;
 
   &[data-disabled] & {
     color: var(--color-dark-100);
@@ -24,18 +24,14 @@
 
 .dropdownMenuItem {
   cursor: pointer;
-
   display: flex;
   gap: 6px;
   align-items: center;
-
   height: 100%;
   padding: 5px;
-
   font-size: var(--font-size-xs);
   line-height: var(--line-height-s);
   color: var(--color-light-100);
-
   transition-duration: 150ms;
 
   &:hover {
@@ -68,8 +64,8 @@
 }
 
 .arrow {
-  height: 8px;
   width: 14px;
+  height: 8px;
   stroke: var(--color-dark-100);
   fill: var(--color-dark-500);
 }

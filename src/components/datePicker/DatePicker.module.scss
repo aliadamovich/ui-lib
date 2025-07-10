@@ -5,11 +5,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     width: 36px;
     height: 36px;
     margin: 0;
-
     color: var(--color-light-100);
   }
 
@@ -38,20 +36,15 @@
   /* day styles */
   :global(.react-datepicker__day) {
     position: relative;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     width: 36px;
     height: 36px;
     margin: 0;
-
     color: var(--color-light-100);
-
     border-radius: 50%;
     outline: none;
-
     transition: all 0.3s ease 0s;
 
     &:hover {
@@ -97,9 +90,9 @@
 }
 
 .calendar {
-  border: 1px solid var(--color-dark-300);
-  padding: 16px 24px;
   width: 300px;
+  padding: 16px 24px;
+  border: 1px solid var(--color-dark-300);
   background-color: var(--color-dark-500);
 }
 
@@ -173,18 +166,13 @@
 
 .button {
   all: unset;
-
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 32px;
   height: 32px;
-
   border-radius: 50%;
-
   transition: all 0.3s ease 0s;
   background: var(--color-dark-100);
 

@@ -1,9 +1,9 @@
 .fullscreen {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  flex-direction: column;
   gap: 12px;
   overflow: hidden;
 }
@@ -53,17 +53,17 @@
 
 .loaderSvg {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
   animation: rotate 2s linear infinite;
-  display: block;
   overflow: hidden;
 }
 
 .loaderSvg::before {
-  content: '';
-  display: block;
   position: absolute;
+  display: block;
+  content: '';
 }
 
 .loaderSvg > circle {

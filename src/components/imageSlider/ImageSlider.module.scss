@@ -12,10 +12,10 @@
 
 .slideContent {
   position: relative;
-  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .image {
@@ -90,11 +90,11 @@
 
 .counter {
   position: absolute;
-  bottom: 10px;
   right: 10px;
-  background-color: #00000080;
-  color: var(--color-light-100);
+  bottom: 10px;
   padding: 4px 8px;
-  border-radius: 4px;
   font-size: 12px;
+  color: var(--color-light-100);
+  background-color: #00000080;
+  border-radius: 4px;
 }
