@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { DropdownMenu } from './DropdownMenu'
-import * as RadixDropdownMenu from '@radix-ui/react-dropdown-menu'
 
 import { HiDotsHorizontal } from 'react-icons/hi'
 import { DropdownMenuItem } from './DropdownMenuItem'
