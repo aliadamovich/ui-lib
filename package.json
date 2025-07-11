@@ -21,7 +21,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
-    "build-storybook": "storybook build --output-dir storybook-static --base /ui-lib",
+    "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
   "dependencies": {
