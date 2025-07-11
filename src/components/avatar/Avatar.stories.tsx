@@ -32,14 +32,14 @@ type Story = StoryObj<typeof Avatar>
 export const Default: Story = {
   args: {
     size: 'medium',
-    name: 'Eugene Kravchenko',
+    name: 'Walter James',
   },
 }
 
 export const Small: Story = {
   args: {
     avatar: 'https://i.pravatar.cc/300',
-    name: 'Eugene Kravchenko',
+    name: 'Walter James',
     size: 'small',
   },
 }
@@ -47,7 +47,7 @@ export const Small: Story = {
 export const Medium: Story = {
   args: {
     avatar: 'https://i.pravatar.cc/300',
-    name: 'Eugene Kravchenko',
+    name: 'Walter James',
     size: 'medium',
   },
 }
@@ -55,7 +55,7 @@ export const Medium: Story = {
 export const Large: Story = {
   args: {
     // avatar: 'https://i.pravatar.cc/300',
-    name: 'Eugene Kravchenko',
+    name: 'Jane Cela',
     size: 'large',
   },
 }
