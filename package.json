@@ -2,7 +2,7 @@
   "name": "@aliadamovich/ui-lib",
   "homepage": "https://aliadamovich.github.io/ui-lib",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
