@@ -16,6 +16,7 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   viteFinal: config => {
+    config.base = '/ui-lib/'
     config.build = config.build || {}
     config.build.sourcemap = false
     return config
