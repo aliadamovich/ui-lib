@@ -39,3 +39,6 @@ const Example = () => {
   ```bash
   pnpm dev
   ```
+
+# 📚 Documentation
+  [aliadamovich.github.io/ui-lib](https://aliadamovich.github.io/ui-lib)
