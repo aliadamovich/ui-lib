@@ -1,0 +1,1 @@
+import{j as d}from"./jsx-runtime-c9381026.js";import{c as o}from"./clsx-0839fdbe.js";const t="_card_10dp7_1",e={card:t},a=({children:r,className:c,...s})=>d("div",{className:o(e.card,c),...s,children:r});try{a.displayName="Card",a.__docgenInfo={description:"",displayName:"Card",props:{}}}catch{}export{a as C};

@@ -1,0 +1,25 @@
+import{j as Q}from"./jsx-runtime-c9381026.js";import{c as W}from"./clsx-0839fdbe.js";import{t as M,c as Z,e as $,a as ee,n as K,d as te,g as ae,b as re,f as T,m as X,h,i as se,j as ne,p as oe,s as N,k as ce,l as ue}from"./subMonths-477f91cc.js";import"./index-8b3efc3f.js";import"./_commonjsHelpers-de833af9.js";function b(e,t){const a=+M(e)-+M(t);return a<0?-1:a>0?1:a}function ie(e){return Z(e,Date.now())}function de(e){return t=>{const o=(e?Math[e]:Math.trunc)(t);return o===0?0:o}}function fe(e,t){return+M(e)-+M(t)}function me(e,t){const a=M(e,t==null?void 0:t.in);return+$(a,t)==+ee(a,t)}function le(e,t,a){const[o,r,i]=K(a==null?void 0:a.in,e,e,t),u=b(r,i),s=Math.abs(te(r,i));if(s<1)return 0;r.getMonth()===1&&r.getDate()>27&&r.setDate(30),r.setMonth(r.getMonth()-u*s);let d=b(r,i)===-u;me(o)&&s===1&&b(o,i)===1&&(d=!1);const f=u*(s-+d);return f===0?0:f}function ge(e,t,a){const o=fe(e,t)/1e3;return de(a==null?void 0:a.roundingMethod)(o)}function De(e,t,a){const o=ae(),r=(a==null?void 0:a.locale)??o.locale??re,i=2520,u=b(e,t);if(isNaN(u))throw new RangeError("Invalid time value");const s=Object.assign({},a,{addSuffix:a==null?void 0:a.addSuffix,comparison:u}),[d,f]=K(a==null?void 0:a.in,...u>0?[t,e]:[e,t]),m=ge(f,d),P=(T(f)-T(d))/1e3,n=Math.round((m-P)/60);let l;if(n<2)return a!=null&&a.includeSeconds?m<5?r.formatDistance("lessThanXSeconds",5,s):m<10?r.formatDistance("lessThanXSeconds",10,s):m<20?r.formatDistance("lessThanXSeconds",20,s):m<40?r.formatDistance("halfAMinute",0,s):m<60?r.formatDistance("lessThanXMinutes",1,s):r.formatDistance("xMinutes",1,s):n===0?r.formatDistance("lessThanXMinutes",1,s):r.formatDistance("xMinutes",n,s);if(n<45)return r.formatDistance("xMinutes",n,s);if(n<90)return r.formatDistance("aboutXHours",1,s);if(n<X){const c=Math.round(n/60);return r.formatDistance("aboutXHours",c,s)}else{if(n<i)return r.formatDistance("xDays",1,s);if(n<h){const c=Math.round(n/X);return r.formatDistance("xDays",c,s)}else if(n<h*2)return l=Math.round(n/h),r.formatDistance("aboutXMonths",l,s)}if(l=le(f,d),l<12){const c=Math.round(n/h);return r.formatDistance("xMonths",c,s)}else{const c=l%12,_=Math.trunc(l/12);return c<3?r.formatDistance("aboutXYears",_,s):c<9?r.formatDistance("overXYears",_,s):r.formatDistance("almostXYears",_+1,s)}}function Me(e,t){return De(e,ie(e),t)}function he(e,t,a){return se(e,-t,a)}function Se(e,t,a){return ne(e,-t,a)}const ye="_date_1jym4_1",pe={date:ye},Ie=e=>{const t=typeof e=="string"?new Date(e):e;return Me(t,{addSuffix:!0}).replace("about ","")},Oe=e=>{const t=typeof e=="string"?new Date(e):e;return ce(t,"MMMM d, yyyy")},we=e=>{const t=oe(e),a=N(new Date,2);return t>a?Ie(t):Oe(t)},x=({date:e,className:t})=>Q("div",{className:W(pe.date,t),children:we(e)});try{x.displayName="DateStamp",x.__docgenInfo={description:"",displayName:"DateStamp",props:{date:{defaultValue:null,description:"",name:"date",required:!0,type:{name:"string"}},className:{defaultValue:null,description:"",name:"className",required:!1,type:{name:"string"}}}}}catch{}const Xe={title:"Components/DateStamp",component:x,parameters:{layout:"centered"},tags:["autodocs"],argTypes:{date:{control:"date",description:"ISO date string to be formatted"},className:{control:"text",description:"Optional CSS class to customize styling"}}},g=e=>e.toISOString(),D=new Date,S={args:{date:g(D)}},y={args:{date:g(Se(D,30))}},p={args:{date:g(he(D,5))}},I={args:{date:g(N(D,1))}},O={args:{date:g(N(D,2))}},w={args:{date:g(ue(D,1))}};var A,H,Y;S.parameters={...S.parameters,docs:{...(A=S.parameters)==null?void 0:A.docs,source:{originalSource:`{
+  args: {
+    date: getISODate(now)
+  }
+}`,...(Y=(H=S.parameters)==null?void 0:H.docs)==null?void 0:Y.source}}};var j,C,L;y.parameters={...y.parameters,docs:{...(j=y.parameters)==null?void 0:j.docs,source:{originalSource:`{
+  args: {
+    date: getISODate(subMinutes(now, 30))
+  }
+}`,...(L=(C=y.parameters)==null?void 0:C.docs)==null?void 0:L.source}}};var v,z,R;p.parameters={...p.parameters,docs:{...(v=p.parameters)==null?void 0:v.docs,source:{originalSource:`{
+  args: {
+    date: getISODate(subHours(now, 5))
+  }
+}`,...(R=(z=p.parameters)==null?void 0:z.docs)==null?void 0:R.source}}};var k,q,E;I.parameters={...I.parameters,docs:{...(k=I.parameters)==null?void 0:k.docs,source:{originalSource:`{
+  args: {
+    date: getISODate(subDays(now, 1))
+  }
+}`,...(E=(q=I.parameters)==null?void 0:q.docs)==null?void 0:E.source}}};var F,V,U;O.parameters={...O.parameters,docs:{...(F=O.parameters)==null?void 0:F.docs,source:{originalSource:`{
+  args: {
+    date: getISODate(subDays(now, 2))
+  }
+}`,...(U=(V=O.parameters)==null?void 0:V.docs)==null?void 0:U.source}}};var B,G,J;w.parameters={...w.parameters,docs:{...(B=w.parameters)==null?void 0:B.docs,source:{originalSource:`{
+  args: {
+    date: getISODate(subMonths(now, 1))
+  }
+}`,...(J=(G=w.parameters)==null?void 0:G.docs)==null?void 0:J.source}}};const Ae=["Current","MinutesAgo","HoursAgo","Yesterday","TwoDaysAgo","LastMonth"];export{S as Current,p as HoursAgo,w as LastMonth,y as MinutesAgo,O as TwoDaysAgo,I as Yesterday,Ae as __namedExportsOrder,Xe as default};

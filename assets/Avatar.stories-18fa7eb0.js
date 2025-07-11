@@ -1,0 +1,32 @@
+import{j as l,a as O}from"./jsx-runtime-c9381026.js";import{r as c}from"./index-8b3efc3f.js";import{c as W,u as E}from"./index-6c7aef41.js";import{u as J}from"./index-dfd532b3.js";import{P as _}from"./index-0db981d8.js";import{c as Q}from"./clsx-0839fdbe.js";import"./_commonjsHelpers-de833af9.js";import"./index-a38d0dca.js";var B={exports:{}},P={};/**
+ * @license React
+ * use-sync-external-store-shim.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var d=c;function X(e,a){return e===a&&(e!==0||1/e===1/a)||e!==e&&a!==a}var Y=typeof Object.is=="function"?Object.is:X,Z=d.useState,ee=d.useEffect,ae=d.useLayoutEffect,te=d.useDebugValue;function re(e,a){var t=a(),r=Z({inst:{value:t,getSnapshot:a}}),o=r[0].inst,n=r[1];return ae(function(){o.value=t,o.getSnapshot=a,h(o)&&n({inst:o})},[e,t,a]),ee(function(){return h(o)&&n({inst:o}),e(function(){h(o)&&n({inst:o})})},[e]),te(t),t}function h(e){var a=e.getSnapshot;e=e.value;try{var t=a();return!Y(e,t)}catch{return!0}}function ne(e,a){return a()}var oe=typeof window>"u"||typeof window.document>"u"||typeof window.document.createElement>"u"?ne:re;P.useSyncExternalStore=d.useSyncExternalStore!==void 0?d.useSyncExternalStore:oe;B.exports=P;var se=B.exports;function ce(){return se.useSyncExternalStore(ue,()=>!0,()=>!1)}function ue(){return()=>{}}var A="Avatar",[ie,be]=W(A),[le,T]=ie(A),U=c.forwardRef((e,a)=>{const{__scopeAvatar:t,...r}=e,[o,n]=c.useState("idle");return l(le,{scope:t,imageLoadingStatus:o,onImageLoadingStatusChange:n,children:l(_.span,{...r,ref:a})})});U.displayName=A;var q="AvatarImage",D=c.forwardRef((e,a)=>{const{__scopeAvatar:t,src:r,onLoadingStatusChange:o=()=>{},...n}=e,u=T(q,t),s=de(r,n),i=J(m=>{o(m),u.onImageLoadingStatusChange(m)});return E(()=>{s!=="idle"&&i(s)},[s,i]),s==="loaded"?l(_.img,{...n,ref:a,src:r}):null});D.displayName=q;var G="AvatarFallback",$=c.forwardRef((e,a)=>{const{__scopeAvatar:t,delayMs:r,...o}=e,n=T(G,t),[u,s]=c.useState(r===void 0);return c.useEffect(()=>{if(r!==void 0){const i=window.setTimeout(()=>s(!0),r);return()=>window.clearTimeout(i)}},[r]),u&&n.imageLoadingStatus!=="loaded"?l(_.span,{...o,ref:a}):null});$.displayName=G;function L(e,a){return e?a?(e.src!==a&&(e.src=a),e.complete&&e.naturalWidth>0?"loaded":"loading"):"error":"idle"}function de(e,{referrerPolicy:a,crossOrigin:t}){const r=ce(),o=c.useRef(null),n=(()=>r?(o.current||(o.current=new window.Image),o.current):null)(),[u,s]=c.useState(()=>L(n,e));return E(()=>{s(L(n,e))},[n,e]),E(()=>{const i=H=>()=>{s(H)};if(!n)return;const m=i("loaded"),x=i("error");return n.addEventListener("load",m),n.addEventListener("error",x),a&&(n.referrerPolicy=a),typeof t=="string"&&(n.crossOrigin=t),()=>{n.removeEventListener("load",m),n.removeEventListener("error",x)}},[n,t,a]),u}var me=U,ve=D,pe=$;const fe="_avatarRoot_olulz_1",ge="_avatarImage_olulz_9",he="_avatarFallback_olulz_15",S={avatarRoot:fe,avatarImage:ge,avatarFallback:he},Se=e=>{let a=0;for(let r=0;r<e.length;r++)a=e.charCodeAt(r)+((a<<5)-a);let t="#";for(let r=0;r<3;r++){const o=a>>r*8&255;t+=("00"+o.toString(16)).slice(-2)}return t},k=(e,a)=>{const t=parseInt(e.slice(1),16),r=Math.round(255*a),o=Math.min(255,Math.max(0,(t>>16)+r)),n=Math.min(255,Math.max(0,(t>>8&255)+r)),u=Math.min(255,Math.max(0,(t&255)+r));return"#"+((1<<24)+(o<<16)+(n<<8)+u).toString(16).slice(1)},Ee=(e="default")=>{const{lightBackground:a,textColor:t}=c.useMemo(()=>{const r=Se(e.toLowerCase().trim());return{lightBackground:k(r,.3),textColor:k(r,-.2)}},[e]);return{lightBackground:a,textColor:t}},y=({avatar:e,className:a,name:t="User",size:r="medium",...o})=>{const{lightBackground:n,textColor:u}=Ee(t),s=t==null?void 0:t.split(" ").slice(0,2).map(i=>i[0]).join("");return O(me,{className:Q(S.avatarRoot,a),"data-size":r,...o,children:[l(ve,{alt:t,className:S.avatarImage,src:e}),l(pe,{className:S.avatarFallback,delayMs:0,style:{background:n,color:u},children:s})]})};try{y.displayName="Avatar",y.__docgenInfo={description:"",displayName:"Avatar",props:{avatar:{defaultValue:null,description:"",name:"avatar",required:!1,type:{name:"string"}},name:{defaultValue:{value:"User"},description:"",name:"name",required:!1,type:{name:"string"}},size:{defaultValue:{value:"medium"},description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"small"'},{value:'"large"'},{value:'"medium"'}]}},asChild:{defaultValue:null,description:"",name:"asChild",required:!1,type:{name:"boolean"}}}}}catch{}const we={title:"Components/Avatar",component:y,parameters:{layout:"centered"},tags:["autodocs"],argTypes:{avatar:{control:"text",description:"URL of the avatar image"},name:{control:"text",description:"User`s name"},size:{control:{type:"select"},options:["small","medium","large"],description:"Size of the avatar"}}},v={args:{size:"medium",name:"Eugene Kravchenko"}},p={args:{avatar:"https://i.pravatar.cc/300",name:"Eugene Kravchenko",size:"small"}},f={args:{avatar:"https://i.pravatar.cc/300",name:"Eugene Kravchenko",size:"medium"}},g={args:{name:"Eugene Kravchenko",size:"large"}};var C,I,b;v.parameters={...v.parameters,docs:{...(C=v.parameters)==null?void 0:C.docs,source:{originalSource:`{
+  args: {
+    size: 'medium',
+    name: 'Eugene Kravchenko'
+  }
+}`,...(b=(I=v.parameters)==null?void 0:I.docs)==null?void 0:b.source}}};var w,R,z;p.parameters={...p.parameters,docs:{...(w=p.parameters)==null?void 0:w.docs,source:{originalSource:`{
+  args: {
+    avatar: 'https://i.pravatar.cc/300',
+    name: 'Eugene Kravchenko',
+    size: 'small'
+  }
+}`,...(z=(R=p.parameters)==null?void 0:R.docs)==null?void 0:z.source}}};var M,N,K;f.parameters={...f.parameters,docs:{...(M=f.parameters)==null?void 0:M.docs,source:{originalSource:`{
+  args: {
+    avatar: 'https://i.pravatar.cc/300',
+    name: 'Eugene Kravchenko',
+    size: 'medium'
+  }
+}`,...(K=(N=f.parameters)==null?void 0:N.docs)==null?void 0:K.source}}};var j,F,V;g.parameters={...g.parameters,docs:{...(j=g.parameters)==null?void 0:j.docs,source:{originalSource:`{
+  args: {
+    // avatar: 'https://i.pravatar.cc/300',
+    name: 'Eugene Kravchenko',
+    size: 'large'
+  }
+}`,...(V=(F=g.parameters)==null?void 0:F.docs)==null?void 0:V.source}}};const Re=["Default","Small","Medium","Large"];export{v as Default,g as Large,f as Medium,p as Small,Re as __namedExportsOrder,we as default};
